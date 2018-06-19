@@ -1,0 +1,35 @@
+
+body{
+	font-family: Arial, sans-serif;
+}
+p.header{
+	font-size: 100%;
+}
+th{
+	border: 2px solid black;
+}
+td{
+	border: 1px solid black;
+}
+table{
+	border: 3px solid black;
+}
+div.table_content{
+	float: left;
+
+}
+
+div.form_content{
+	float: left;
+	padding-left: 10px;
+
+}
+
+div.filter{
+	float: left;
+	padding-left: 10px;
+}
+
+HR{
+	clear: both;
+}

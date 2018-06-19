@@ -1,0 +1,108 @@
+<div class="table_content">
+	<p>Publishers Table
+	<table>
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Country</th>
+			<th>Website</th>
+		</tr>
+		{{#each p_array}}
+		<tr>
+			<td> {{this.name}}</td>
+			<td> {{this.country}} </td>
+			<td> {{this.website}} </td>
+		</tr>
+		{{/each}}
+	</tbody>	
+	</table>
+</div>	
+<div class="form_content">	
+	<p>Publisher Table Form
+	<form action="http://flip3.engr.oregonstate.edu:22725/publishers" method="post">
+		<p>Name:
+		<input type="text" required name="p_name"> </input>
+		<p>Country:
+		<input type="text" name="p_country"> </input>
+		<p>Website:
+		<input type="text" name="p_website"> </input>
+		<br>
+		<input type="submit" name="submit" value="p_add"> </input>
+	</form>
+</div>	
+
+<HR WIDTH="60%" ALIGN="LEFT">
+
+<div class="table_content">
+	<p>BG Publishers Table
+	<table>
+	<tbody>
+		<tr>
+			<th>P Name</th>
+			<th>BG Name</th>
+		</tr>
+		{{#each bgp_array}}
+		<tr>
+			<td> {{this.p_name}} </td>
+			<td> {{this.bg_name}}</td>
+		</tr>	
+		{{/each}}
+	</tbody>	
+	</table>
+</div>	
+<div class="form_content">			
+	<p>Board Game Publisher Table Form
+	<form action="http://flip3.engr.oregonstate.edu:22725/publishers" method="post">
+		<p>P Name:
+		<select name="p_name">
+		{{#each p_array}}
+		<option value="{{this.name}}"> {{this.name}}</option>
+		{{/each}}
+		</select>
+		<p>BG Name:
+		<select name="bg_name">
+		{{#each bg_array}}
+		<option value="{{this.name}}"> {{this.name}}</option>
+		{{/each}}
+		</select>
+		<br>
+		<input type="submit" name="submit" value="bgp_add"> </input>
+	</form>
+</div>
+<HR WIDTH="60%" ALIGN="LEFT">
+<div class="table_content">
+	<p>Publishers Designers Table
+	<table>
+	<tbody>
+		<tr>
+			<th>P Name</th>
+			<th>D Name</th>
+		</tr>
+		{{#each dp_array}}
+		<tr>
+			<td> {{this.p_name}}</td>
+			<td> {{this.d_name}} </td>
+		</tr>	
+		{{/each}}
+	</tbody>	
+	</table>
+</div>	
+<div class="form_content">			
+	<p>Publisher Designer Table Form
+	<form action="http://flip3.engr.oregonstate.edu:22725/publishers" method="post">
+		<p>P Name:
+		<select name="p_name">
+		{{#each p_array}}
+		<option value="{{this.name}}"> {{this.name}}</option>
+		{{/each}}
+		</select>
+		<p>D Name:
+		<select name="d_name">
+		{{#each d_array}}
+		<option value="{{this.name}}"> {{this.name}}</option>
+		{{/each}}
+		</select>
+		<br>
+		<input type="submit" name="submit" value="pd_add"> </input>
+	</form>
+</div>	

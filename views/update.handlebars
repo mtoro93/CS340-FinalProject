@@ -1,0 +1,18 @@
+<form action="http://flip3.engr.oregonstate.edu:22725/update" method="post">
+	<p>Name:
+	<input type="text" required name="bg_name" value="{{this.update_name}}"> </input>
+	<p>Age Requirement:
+	<input type="number" name="bg_age" value={{this.update_age}}> </input>
+	<p>Playing Time:
+	<input type="number" name="bg_time" value={{this.update_time}}> </input>
+	<p>Max Players:
+	<input type="number" name="bg_max" value={{this.update_players}}> </input>
+	<p>Artist:
+	<input type="text" name="bg_artist" value="{{this.update_artist}}"> </input>
+	<p>Year Published:
+	<input type="number" name="bg_year" value={{this.update_year}}> </input>
+	<br>
+	<input type=hidden name="bg_id" value={{this.update_id}}> </input>
+	<input type="submit" name="submit" value="bg_update"> </input>
+</form>
+	
